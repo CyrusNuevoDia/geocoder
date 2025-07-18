@@ -2,7 +2,7 @@ defmodule Geocoder.Mixfile do
   use Mix.Project
 
   @source_url "https://github.com/CyrusOfEden/geocoder"
-  @version "2.2.1"
+  @version "2.2.2"
 
   def project do
     [
