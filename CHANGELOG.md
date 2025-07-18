@@ -1,5 +1,11 @@
 [Unreleased]
 
+[2.2.2] - 2025-07-18
+
+### Changes
+
+- Fix HTTPoison client to handle non-200 status codes
+
 [2.2.1] - 2024-12-17
 
 ### Changes
