@@ -14,11 +14,28 @@ jobs:
       fail-fast: false
       matrix:
         # https://repo.hex.pm/builds/elixir/builds.txt
-        elixir: [1.14, 1.15]
-        otp: [24.x, 25.x, 26.x]
-        include:
-          - elixir: 1.14
+        elixir: [1.14, 1.15, 1.16, 1.17, 1.18, 1.19]
+        otp: [24.x, 25.x, 26.x, 27.x, 28.x]
+        exclude:
+          # Elixir 1.19 requires OTP 26+
+          - elixir: 1.19
+            otp: 24.x
+          - elixir: 1.19
             otp: 25.x
+          # Elixir 1.18 requires OTP 25+
+          - elixir: 1.18
+            otp: 24.x
+          # Elixir 1.17 requires OTP 25+
+          - elixir: 1.17
+            otp: 24.x
+          # Elixir 1.16 requires OTP 24+
+          - elixir: 1.14
+            otp: 28.x
+          - elixir: 1.15
+            otp: 28.x
+        include:
+          - elixir: 1.16
+            otp: 26.x
             lint: lint
             coverage: coverage
     steps:
