@@ -36,7 +36,7 @@ jobs:
             lint: lint
             coverage: coverage
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: erlef/setup-beam@v1
         with:
